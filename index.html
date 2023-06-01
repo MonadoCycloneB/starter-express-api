@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- HTML for the user interface -->
+<h1>Video Generator</h1>
+
+<!-- Form for uploading an image and inputting a YouTube link -->
+<form id="video-form" method="post" action="/upload" enctype="multipart/form-data">
+  <label for="image-upload">Upload an image:</label><br>
+  <input type="file" name="image" id="image-upload"><br>
+  <br>
+  <label for="youtube-link">YouTube video link:</label><br>
+  <input type="text" name="youtubeLink" id="youtube-link"><br>
+  <br>
+  <label for="start-time">Start time (seconds):</label><br>
+  <input type="number" name="startTime" id="start-time" step="0.1" min="0"><br>
+  <br>
+  <button type="submit">Generate Video</button>
+</form>
+
+<!-- Div to display the generated video -->
+<div id="video-container">
+  <!-- The generated video will be displayed here -->
+</div>
+
+<!-- JavaScript for handling form submission and displaying the video -->
+<script src="./js/main.js"></script>
+</body>
+</html>
